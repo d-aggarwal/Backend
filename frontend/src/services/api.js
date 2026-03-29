@@ -22,6 +22,15 @@ export const authAPI = {
   logout: () => api.post('/users/logout'),
   getCurrentUser: () => api.get('/users/current-user'),
   refreshToken: () => api.post('/users/refresh-token'),
+  getAdminPanel: () => api.get('/users/admin-panel'),
+};
+
+export const notesAPI = {
+  createNote: (data) => api.post('/notes', data),
+  getNotes: () => api.get('/notes'),
+  getNoteById: (noteId) => api.get(`/notes/${noteId}`),
+  updateNote: (noteId, data) => api.patch(`/notes/${noteId}`, data),
+  deleteNote: (noteId) => api.delete(`/notes/${noteId}`),
 };
 
 export default api;

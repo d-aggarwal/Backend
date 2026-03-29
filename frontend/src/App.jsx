@@ -4,6 +4,8 @@ import { ProtectedRoute } from './components/ProtectedRoute';
 import { Register } from './pages/Register';
 import { Login } from './pages/Login';
 import { Dashboard } from './pages/Dashboard';
+import { Admin } from './pages/Admin';
+import { Notes } from './pages/Notes';
 import './index.css';
 
 function App() {
@@ -18,6 +20,22 @@ function App() {
             element={
               <ProtectedRoute>
                 <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute>
+                <Admin />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/notes"
+            element={
+              <ProtectedRoute>
+                <Notes />
               </ProtectedRoute>
             }
           />
