@@ -15,7 +15,7 @@ export function Dashboard() {
   return (
     <div className="dashboard">
       <header className="dashboard-header">
-        <h1>🎬 Streamify</h1>
+        <h1>🎬 Notepad</h1>
         <div className="header-user">
           <span>Welcome, {user?.fullName}</span>
           <button onClick={handleLogout} className="btn-logout">

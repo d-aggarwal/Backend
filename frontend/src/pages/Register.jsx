@@ -60,7 +60,7 @@ export function Register() {
     <div className="auth-container">
       <div className="auth-card">
         <h1>Create Account</h1>
-        <p className="subtitle">Join Streamify</p>
+        <p className="subtitle">Join Notepad</p>
 
         {error && <div className="error-message">{error}</div>}
 
