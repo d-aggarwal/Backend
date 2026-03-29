@@ -1,0 +1,33 @@
+import { Router } from "express";
+import {
+  registerUer,
+  loginUser,
+  logoutUser,
+  refreshAccessToken,
+  changeCurrentPassword,
+  getCurrentUser,
+  updateAccountDetails,
+  getAdminPanel,
+} from "../controllers/user.controller.js";
+import { verifyJWT } from "../middlewares/auth.middleware.js";
+import { verifyRole } from "../middlewares/role.middleware.js";
+
+const router = Router();
+
+router.route("/register").post(
+  registerUer
+);
+
+router.route("/login").post(loginUser);
+
+//secured routes
+router.route("/logout").post(verifyJWT, logoutUser);
+router.route("/refresh-token").post(refreshAccessToken);
+router.route("/change-password").post(verifyJWT, changeCurrentPassword);
+router.route("/current-user").get(verifyJWT, getCurrentUser);
+router.route("/update-account").patch(verifyJWT, updateAccountDetails);
+
+//admin protected routes
+router.route("/admin-panel").get(verifyJWT, verifyRole(["admin"]), getAdminPanel);
+
+export default router;
