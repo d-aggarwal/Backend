@@ -438,16 +438,6 @@ Response: 200 OK
 }
 ```
 
-## 🎨 UI/UX Features
-
-- Modern dark theme with gradient backgrounds
-- Glassmorphism design elements
-- Smooth animations and transitions
-- Responsive layout for mobile & desktop
-- Real-time form validation
-- Success and error notifications
-- Loading states
-- Empty states with helpful messages
 
 ## 🚦 Environment Variables
 
@@ -509,5 +499,3 @@ This project is open source and available under the MIT License.
 Built with ❤️ using Node.js, React, and MongoDB
 
 ---
-
-**Happy Streaming! 🎬**
